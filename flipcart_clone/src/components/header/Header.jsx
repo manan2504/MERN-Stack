@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/styles';
 
 // components
 import SearchBar from './SearchBar';
+import HeaderButtons from './HeaderButtons';
 
 
 const usestyle = makeStyles({
@@ -64,7 +65,8 @@ const Header = () => {
             <img src={subURL} className={classes.subURL} />
           </Box>
         </Box>
-        <SearchBar  />
+        <SearchBar />
+        <HeaderButtons />
       </ToolBar>
     </AppBar>
   );
