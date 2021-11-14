@@ -1,7 +1,13 @@
-import { AppBar, Toolbar, makeStyles, Typography, Box } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  makeStyles,
+  Typography,
+  Box,
+} from '@material-ui/core';
 
 // components
-
+import SearchBar from './SearchBar';
 
 
 const usestyle = makeStyles({
@@ -21,7 +27,7 @@ const usestyle = makeStyles({
   },
 
   container: {
-    display: 'flex'
+    display: 'flex',
   },
   component: {
     marginLeft: '12%',
@@ -30,29 +36,31 @@ const usestyle = makeStyles({
 
   subheading: {
     fontSize: 10,
-    fontStyle:'italic'
-  }
-})
-
+    fontStyle: 'italic',
+  },
+});
 
 const Header = () => {
   const classes = usestyle();
-  const logoURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
-  const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png';
+  const logoURL =
+    'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png';
+  const subURL =
+    'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png';
 
   return (
     <AppBar className={classes.header}>
       <Toolbar>
         <Box className={classes.component}>
-        <img src={logoURL} className={classes.logo} />
-        <Box className={classes.container}>
-        <Typography className={classes.subheading}>Explore Plus</Typography>
-        <img src={subURL} className={classes.subURL} />
+          <img src={logoURL} className={classes.logo} />
+          <Box className={classes.container}>
+            <Typography className={classes.subheading}>Explore Plus</Typography>
+            <img src={subURL} className={classes.subURL} />
+          </Box>
         </Box>
-        </Box>
+        <SearchBar  />
       </Toolbar>
-   </AppBar> 
-  )
+    </AppBar>
+  );
 };
 
 export default Header;
