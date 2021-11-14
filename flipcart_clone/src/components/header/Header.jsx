@@ -5,6 +5,7 @@ import {
   Typography,
   Box,
 } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
 
 // components
 import SearchBar from './SearchBar';
@@ -40,6 +41,12 @@ const usestyle = makeStyles({
   },
 });
 
+const ToolBar = withStyles({
+  root: {
+    minHeight: 55,
+  }
+})(Toolbar);
+
 const Header = () => {
   const classes = usestyle();
   const logoURL =
@@ -49,16 +56,16 @@ const Header = () => {
 
   return (
     <AppBar className={classes.header}>
-      <Toolbar>
+      <ToolBar>
         <Box className={classes.component}>
           <img src={logoURL} className={classes.logo} />
           <Box className={classes.container}>
-            <Typography className={classes.subheading}>Explore Plus</Typography>
+            <Typography className={classes.subheading}>Explore <Box component='span' style={{color: '#FFE500'}}>Plus</Box> </Typography>
             <img src={subURL} className={classes.subURL} />
           </Box>
         </Box>
         <SearchBar  />
-      </Toolbar>
+      </ToolBar>
     </AppBar>
   );
 };
