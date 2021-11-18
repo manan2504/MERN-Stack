@@ -1,4 +1,5 @@
 <!-- first step ---- npm install @mui/material -->
+<!-- npm i react-material-ui-carousel -->
 
 # Getting Started with Create React App
 
