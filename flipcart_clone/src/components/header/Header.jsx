@@ -1,11 +1,5 @@
-import {
-  AppBar,
-  Toolbar,
-  makeStyles,
-  Typography,
-  Box,
-} from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
+import {AppBar, Toolbar, makeStyles, Typography, Box, withStyles} from '@material-ui/core';
+import {  Link} from 'react-router-dom';
 
 // components
 import SearchBar from './SearchBar';
@@ -34,6 +28,8 @@ const usestyle = makeStyles({
   component: {
     marginLeft: '12%',
     lineHeight: 0,
+    textDecoration: 'none',
+    color: '#FFF',
   },
 
   subheading: {
@@ -58,13 +54,13 @@ const Header = () => {
   return (
     <AppBar className={classes.header}>
       <ToolBar>
-        <Box className={classes.component}>
+        <Link to='/' className={classes.component}>
           <img src={logoURL} className={classes.logo} />
           <Box className={classes.container}>
             <Typography className={classes.subheading}>Explore <Box component='span' style={{color: '#FFE500'}}>Plus</Box> </Typography>
             <img src={subURL} className={classes.subURL} />
           </Box>
-        </Box>
+        </Link>
         <SearchBar />
         <HeaderButtons />
       </ToolBar>

@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Banner from "./Banner";
 
 
+
 const useStyle = makeStyles({
     component: {
         padding: 10,
